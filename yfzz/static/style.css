@@ -1,0 +1,43 @@
+<!--for index page-->
+
+h1, p{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+table{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+<!--end index page-->
+
+
+<!--for login page-->
+
+#container {
+    width: 1280px;
+    margin: 10px auto;
+    border: 1px;
+}
+#footer {
+    width: 596px;
+    border: 1px;
+}
+#content1 {
+    float: left;
+    width: 420px;
+    border: 1px;
+}
+#content2 {
+    float: left;
+    width: 420px;
+    border: 1px;
+}
+#footer {
+    clear: both;
+}
+
+<!--end for login-->

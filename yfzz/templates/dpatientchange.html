@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>患者详情</title>
+    <link rel="stylesheet" href="/static/bootstrap_dcl18.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <style type="text/css">
+        .contant{
+            width:400px;
+            top:auto;
+        <!--border-color:#fff5ff;-->
+            padding:15px 30px;
+            /*display:inline-block; */
+            text-align:center;
+        <!--background-color:#FF99CC;-->
+        }
+    </style>
+</head>
+
+<body style="background-color: #ffffd4">
+<!--上部navbar-->
+<div class="navbar navbar-dcl18 navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+        <a href="##" class="navbar-brand">DCL妇产科十八院</a>
+    </div>
+    <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+    <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="##">首页</a></li>
+            <li class="dropdown">
+                <a href="##" data-toggle="dropdown" class="dropdown-toggle">产科小知识<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">食品知识</a></li>
+                    <li><a href="#">药品知识</a></li>
+                    <li><a href="#">健康知识</a></li>
+                </ul>
+            </li>
+            <li><a href="##">留言板</a></li>
+            <li><p style="padding-top: 3.5%">{{ name }} 已登入</p></li>
+        </ul>
+
+        <form action="##" class="navbar-form navbar-right" role="search">
+            <button type="submit" class="btn btn-xs invisible" style="max-height: 0.1px; max-lines: 0.1; max-width: 0.1px">检索</button>
+            <div class="form-group" style="padding-right: 10px">
+                <input type="text" class="form-control" placeholder="请输入检索内容" />
+            </div>
+
+        </form>
+    </div>
+</div>
+<!--上部navbar结束-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><h2>患者详细信息</h2></center>
+<hr>
+<br>
+<br>
+<br>
+<br>
+    <center><div><form method="post">
+        <div class="contant">{% csrf_token %}
+
+            <div class="form-group has-success">
+                <label class="control-label" for="patientId1">账户</label>
+                <input name="id" type="text" value="{{ inpid }}" size="20" maxlength="20" readonly="readonly" class="form-control" id="patientId1" placeholder="成功状态" >
+            </div>
+            <br>
+
+            <div class="form-group has-success">
+                <label class="control-label" for="patientPass1">密码</label>
+                <input name="password" type="password" value="{{ inpassword }}" size="20" maxlength="20" readonly="readonly" class="form-control" id="patientPass1" placeholder="成功状态" >
+            </div>
+            <br>
+
+
+            <div class="form-group has-success">
+                <label class="control-label" for="patientName1">患者姓名</label>
+                <input name="name" type="text" value="{{ inname }}" size="20" maxlength="20" class="form-control" id="patientName1" placeholder="成功状态" >
+            </div>
+            <br>
+
+
+            <br>主治医师：
+            <select name="doctor" class="form-group">
+                <option value="{{ doctorlist.did }}">{{ doctorlist.name }}-{{ doctorlist.did }}</option>
+            </select>
+
+
+            <br>
+            <br>病情描述：
+            <br>
+            <textarea name="info" cols="60" rows="10">{{ ininfo }}</textarea>
+            <br>
+            <br>
+            <input class="btn btn-success" type="submit" value="更新患者信息" />
+            <!-- 点击登录按钮，把表单数据传给服务器 -->
+            <br>
+            <br>
+        </div>
+    </form>
+        <a href="{{ goback }}" onclick="window.close()">返回</a>
+    </div></center>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<!--下部navbar-->
+<div class="navbar navbar-default navbar-fixed-bottom navbar-inverse" role="navigation">
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="##" style="padding-left: 20px">隐私声明</a></li>
+        <li><a href="##" style="padding-left: 20px">法律声明</a></li>
+        <li><a href="##" style="padding-left: 20px">联系我们</a></li>
+        <li class="dropup">
+            <a href="##" data-toggle="dropdown" class="dropdown-toggle" style="padding-left: 20px; padding-right: 40px">Language<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li class="active"><a href="##">中文（简体）</a></li>
+                <li><a href="index_en.html">English</a></li>
+                <li><a href="index_ja.html">日本語</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--下部navbar结束-->
+
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>

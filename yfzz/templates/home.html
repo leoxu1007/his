@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DCL妇产科十八院</title>
+    <link rel="stylesheet" href="/static/bootstrap_dcl18.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+<!--上部navbar-->
+<div class="navbar navbar-dcl18 navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+        <a href="##" class="navbar-brand">DCL妇产科十八院</a>
+    </div>
+    <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+    <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="##">首页</a></li>
+            <li class="dropdown">
+                <a href="##" data-toggle="dropdown" class="dropdown-toggle">产科小知识<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">食品知识</a></li>
+                    <li><a href="#">药品知识</a></li>
+                    <li><a href="#">健康知识</a></li>
+                </ul>
+            </li>
+            <li><a href="##">留言板</a></li>
+            <li><p id="date" style="padding-top: 2.5%">今天是西元：<!-- #BeginDate format:fCh2m -->{{ today }}<!-- #EndDate --></p></li>
+        </ul>
+
+        <form action="##" class="navbar-form navbar-right" role="search">
+            <button type="submit" class="btn btn-xs invisible" style="max-height: 0.1px; max-lines: 0.1; max-width: 0.1px">检索</button>
+            <div class="form-group" style="padding-right: 10px">
+                <input type="text" class="form-control" placeholder="请输入检索内容" />
+            </div>
+
+        </form>
+    </div>
+</div>
+<!--上部navbar结束-->
+<br>
+<br>
+
+<!-- copy these lines to your document: DCL18 chinese index pics-->
+
+<div id="indexscenes_hype_container" style="margin:auto;position:relative;width:1280px;height:600px;overflow:hidden;" align="center">
+    <script type="text/javascript" charset="utf-8" src="/static/index_scenes.hyperesources/indexscenes_hype_generated_script.js?61119"></script>
+</div>
+
+<!-- end copy -->
+
+<center><div style="background-color: #80D2F9; width: 1280px; height: 400px;">
+    <div style="background-color: #343434; height: 3px;"></div>
+    <div style="background-color: #4A4A4A; height: 15px;"></div>
+    <div style="background-color: #4A4A4A; height: 40px;"><span style="font-size: 15px;">&nbsp;</span><span style="font-size: large; padding-top: 15px"><span style="color: white;">每天，数以</span><span style="color: #3CC46E;">万</span><span style="color: white;">计的人们使用我们的网站。</span></span></div>
+    <p>上面那句话真是太不要脸了哈哈哈</p>
+    <p>这下面再整一点宣传之类的吧。</p>
+    <br>
+
+    <font size="8px"><div id="doctorlogin" class="login" style="display: inline-block; width: 280px;"><a href="doctorlogin" style="color:#FFFFFF; text-decoration: none">医生登入</a></div></font>
+    <font size="8px"><div id="patientlogin" class="login" style="display: inline-block; width: 280px;"><a href="patientlogin" style="color:#FFFFFF; text-decoration: none">患者登入</a></div></font>
+    <font size="8px"><div style="display: inline-block; width: 280px;"><a href="adminlogin" style="color:#FFFFFF; text-decoration: none">院管登入</a></div></font>
+    <br>
+</div></center>
+
+
+
+      <div class="navbar navbar-default navbar-fixed-bottom navbar-inverse" role="navigation">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="##" style="padding-left: 20px">隐私声明</a></li>
+              <li><a href="##" style="padding-left: 20px">法律声明</a></li>
+              <li><a href="##" style="padding-left: 20px">联系我们</a></li>
+              <li class="dropup">
+                  <a href="##" data-toggle="dropdown" class="dropdown-toggle" style="padding-left: 20px; padding-right: 40px">Language<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li class="active"><a href="">中文（简体）</a></li>
+                      <li><a href="/static/index_en.html">English</a></li>
+                      <li><a href="/static/index_ja.html">日本語</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+
+      <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+      <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

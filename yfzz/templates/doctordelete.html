@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>医生登录界面</title>
+
+</head>
+
+<body>
+
+    <h1>医生登录界面</h1>
+    <br>
+    <br>
+    <br>
+    <form method="post">{% csrf_token %} 账号
+        <input name="id" type="text" value="{{ indid }}" size="20" maxlength="20" readonly="readonly" />
+        <br>密码
+        <input name="password" type="text" value="{{ inpassword }}" size="20" maxlength="20" readonly="readonly" />
+        <br>
+        <!-- 密码位数限制20位 -->姓名
+        <input name="name" type="text" value="{{ inname }}" size="20" maxlength="20" readonly="readonly" />
+        <br>详情
+        <textarea name="info" cols="40" rows="10" readonly="readonly">{{ iinfo }}</textarea>
+        <br>
+        <input type="submit" value="添加" />
+        <!-- 点击登录按钮，把表单数据传给服务器 -->
+        <br>
+    </form>
+    <a href="{{ goback }}">点此取消</a>
+
+</body>
+
+</html>

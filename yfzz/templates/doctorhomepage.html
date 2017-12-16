@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>医师主页</title>
+    <link rel="stylesheet" href="/static/bootstrap_dcl18.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <style type="text/css">
+        .contant{
+            width:400px;
+            top:auto;
+        <!--border-color:#fff5ff;-->
+            padding:15px 30px;
+            /*display:inline-block; */
+            text-align:center;
+        <!--background-color:#FF99CC;-->
+        }
+        .box {
+            float: left;
+            width: 400px;
+            height: 300px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #ffffd4">
+<!--上部navbar-->
+<div class="navbar navbar-dcl18 navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+        <a href="##" class="navbar-brand">DCL妇产科十八院</a>
+    </div>
+    <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+    <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="doctorlogout">首页</a></li>
+            <li class="dropdown">
+                <a href="##" data-toggle="dropdown" class="dropdown-toggle">产科小知识<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">食品知识</a></li>
+                    <li><a href="#">药品知识</a></li>
+                    <li><a href="#">健康知识</a></li>
+                </ul>
+            </li>
+            <li><a href="##">留言板</a></li>
+            <li><p style="padding-top: 3.5%">{{ name }} 已登入</p></li>
+        </ul>
+
+        <form action="##" class="navbar-form navbar-right" role="search">
+            <button type="submit" class="btn btn-xs invisible" style="max-height: 0.1px; max-lines: 0.1; max-width: 0.1px">检索</button>
+            <div class="form-group" style="padding-right: 10px">
+                <input type="text" class="form-control" placeholder="请输入检索内容" />
+            </div>
+
+        </form>
+    </div>
+</div>
+<!--上部navbar结束-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><h2>{{ hospital }}的 {{ name }} 医师您好</h2></center>
+<hr>
+<div style="padding-left: 10px"><a class="btn btn-danger" href="doctorlogout" id="logout">点此登出</a></div>
+
+    <div class="contant">{% for i in mlist %} {{ i.title }}
+        <a href="/doctorhomepage/?pid={{ i.pid }}">详情</a>
+        <br>{% endfor %}
+        <br>
+    </div>
+    <div id="href" class="invisible">
+        <a href="dpatientlist">我的患者</a>
+    </div>
+
+<center><div style="display:inline-block;">
+<div class="panel panel-danger" style="width: 400px; height: 400px; display: inline-block; margin-right: 30px; margin-left: 30px;" class="box">
+    <div class="panel-heading"><font size="4px">我的患者</font></div>
+    <div class="panel-body">
+        <iframe style="width: 350px; height: 320px" src="dpatientlist" frameborder=0 marginheight=0 marginwidth=0 scrolling=yes class="layout-t"></iframe>
+    </div>
+</div>
+<div class="panel panel-danger" style="width: 400px; height: 400px; display: inline-block; margin-left: 30px; margin-right: 30px;" class="box">
+    <div class="panel-heading"><font size="4px;">今日日程</font></div>
+    <div class="panel-body">
+        <div style="color:red; border:1px solid #CCC">注意<br>&nbsp;&nbsp;本功能处于开发状态</div>
+        <br>
+        <div style=" border:1px solid #CCC">10:00<br>&nbsp;&nbsp;给大长今问诊</div>
+        <br>
+        <div style=" border:1px solid #CCC">11:00<br>&nbsp;&nbsp;给白雪公主开药方</div>
+        <br>
+        <div style=" border:1px solid #CCC">14:00<br>&nbsp;&nbsp;给Elsa接生</div>
+        <br>
+        <div style=" border:1px solid #CCC">16:00<br>&nbsp;&nbsp;查看安娜的产后恢复情况</div>
+        <br>
+        <br>
+    </div>
+</div>
+</div></center>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="navbar navbar-default navbar-fixed-bottom navbar-inverse" role="navigation">
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="##" style="padding-left: 20px">隐私声明</a></li>
+        <li><a href="##" style="padding-left: 20px">法律声明</a></li>
+        <li><a href="##" style="padding-left: 20px">联系我们</a></li>
+        <li class="dropup">
+            <a href="##" data-toggle="dropdown" class="dropdown-toggle" style="padding-left: 20px; padding-right: 40px">Language<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li class="active"><a href="##">中文（简体）</a></li>
+                <li><a href="index_en.html">English</a></li>
+                <li><a href="index_ja.html">日本語</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
